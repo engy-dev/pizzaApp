@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff6347; /* Tomato red, reminiscent of pizza sauce */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #e45231a9; /* Darker shade for hover effect */
+}
+
+.cart-btn-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.cart-btn p {
+  line-height: 1;
+}
+
+.icon-wrapper {
+  display: inline-block;
+  transition: transform 0.6s cubic-bezier(0.28, 0.84, 0.42, 1.15);
+}
+
+.icon-bounce {
+  animation: bounceIcon 0.6s cubic-bezier(0.28, 0.84, 0.42, 1.15);
+}
+
+@keyframes bounceIcon {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  25% {
+    transform: scale(1.1) translateY(-10px);
+  }
+  50% {
+    transform: scale(1) translateY(0);
+  }
+  75% {
+    transform: scale(0.95) translateY(5px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.cart-btn-icon {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.check-icon {
+  color: #4caf50;
+}
+
+.pizza-header {
+  background-color: #f8f1e5;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #e74c3c;
+  margin-right: 15px;
+}
+
+h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #34495e;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.pizza-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.pizza-card:hover {
+  transform: translateY(-5px);
+}
+
+.pizza-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.pizza-card h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.pizza-card h3 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.pizza-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.pizza-card li {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.cart-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #c0392b;
+}
+
+.icon-wrapper {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.cart-btn-icon {
+  font-size: 18px;
+}
+
+.check-icon {
+  color: #2ecc71;
+}
+
+/* Assuming you're using a grid or flexbox layout for multiple cards */
+.pizza-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
