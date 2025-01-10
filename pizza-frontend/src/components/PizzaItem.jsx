@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import pizzaData from "../MockData.json";
 import Button from "./Button";
 import { FaShoppingCart, FaCheckCircle } from "react-icons/fa";
+import { useCart } from "../services/CartContext";
 
 const PizzaCard = ({ pizza }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [icon, setIcon] = useState("cart");
+  const { addToCart } = useCart();
 
   useEffect(() => {
     let timer;
@@ -23,6 +25,7 @@ const PizzaCard = ({ pizza }) => {
 
   const animateIcon = () => {
     setIsAnimating(true);
+    addToCart(pizza);
   };
 
   return (
